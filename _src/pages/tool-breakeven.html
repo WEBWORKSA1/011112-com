@@ -1,0 +1,35 @@
+<!--META {"title":"Break-even Calculator — Units & Revenue to Cover Costs","desc":"Find your break-even point in units and revenue from fixed costs, price and variable cost per unit, plus the sales needed to reach a profit target.","path":"/tools/break-even-calculator.html","nav":"tools","tool":"breakeven","schema":{"@context":"https://schema.org","@type":"WebApplication","name":"Break-even Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}} -->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <a href="/tools.html">Tools</a> / Break-even Calculator</div>
+  <h1>⚖️ Break-even Calculator</h1>
+  <p>How many sales cover your costs each month — and how many hit your profit goal?</p>
+</div></div>
+<section><div class="container">
+  <div class="tool" id="breakeven">
+    <div class="card">
+      <div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>EUR</option><option>GBP</option><option>INR</option><option>AUD</option></select></div>
+      <div class="row">
+        <div class="field"><label for="b_fixed">Fixed costs per month</label><input id="b_fixed" type="number" value="4000" min="0"></div>
+        <div class="field"><label for="b_price">Price per unit / customer</label><input id="b_price" type="number" value="49" min="0"></div>
+        <div class="field"><label for="b_var">Variable cost per unit</label><input id="b_var" type="number" value="9" min="0"></div>
+        <div class="field mb0"><label for="b_target">Monthly profit target</label><input id="b_target" type="number" value="5000" min="0"></div>
+      </div>
+    </div>
+    <div class="result">
+      <span class="kicker">Break-even</span>
+      <div class="big" id="bUnits">–</div><p class="muted">units per month</p>
+      <div class="kv"><span>Break-even revenue</span><b id="bRev"></b></div>
+      <div class="kv"><span>Contribution margin</span><b id="bMargin"></b></div>
+      <div class="kv"><span>Daily pace</span><b id="bDaily"></b></div>
+      <div class="kv"><span>To hit profit target</span><b id="bTarget"></b></div>
+    </div>
+  </div>
+  <div class="ad-zone" data-slot="inArticle"></div>
+  <article class="prose mt2">
+    <h2>The break-even formula</h2>
+    <p>Break-even units = fixed costs ÷ (price − variable cost per unit). The bracket is your <b>contribution margin</b>: what each sale contributes toward fixed costs. Raise price or lower variable cost and break-even falls fast; it's often easier to improve margin than to find more customers.</p>
+    <p>For subscriptions, treat "units" as paying customers and price as monthly revenue per customer. Then use the <a href="/tools/mrr-calculator.html">MRR &amp; LTV Projector</a> to see how churn changes the picture, and read <a href="/guides/how-to-price-saas.html">how to price a SaaS product</a>.</p>
+  </article>
+  {{TOOL_LEAD:break-even}}
+  {{RELATED}}
+</div></section>

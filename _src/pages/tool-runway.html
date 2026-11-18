@@ -1,0 +1,40 @@
+<!--META {"title":"Runway & Burn Rate Calculator — Are You Default Alive?","desc":"Calculate your startup's burn rate, months of runway and break-even month with revenue and expense growth. Includes a default-alive check and 36-month cash chart.","path":"/tools/runway-calculator.html","nav":"tools","tool":"runway","schema":{"@context":"https://schema.org","@type":"WebApplication","name":"Runway & Burn Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}} -->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <a href="/tools.html">Tools</a> / Runway Calculator</div>
+  <h1>⏳ Runway &amp; Burn Calculator</h1>
+  <p>How many months until the money runs out — and will revenue catch up first?</p>
+</div></div>
+<section><div class="container">
+  <div class="tool" id="runway">
+    <div class="card">
+      <div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>EUR</option><option>GBP</option><option>INR</option><option>AUD</option></select></div>
+      <div class="row">
+        <div class="field"><label for="r_cash">Cash in bank</label><input id="r_cash" type="number" value="50000" min="0"></div>
+        <div class="field"><label for="r_rev">Monthly revenue</label><input id="r_rev" type="number" value="2000" min="0"></div>
+        <div class="field"><label for="r_growth">Revenue growth % / month</label><input id="r_growth" type="number" value="10" step="0.5"></div>
+        <div class="field"><label for="r_exp">Monthly expenses</label><input id="r_exp" type="number" value="7000" min="0"></div>
+        <div class="field mb0"><label for="r_expg">Expense growth % / month</label><input id="r_expg" type="number" value="2" step="0.5"></div>
+      </div>
+    </div>
+    <div class="result">
+      <span class="kicker">Runway</span>
+      <div class="big" id="rRunway">–</div>
+      <h3 id="rAlive"></h3>
+      <div class="kv"><span>Current net burn</span><b id="rBurn"></b></div>
+      <div class="kv"><span>Break-even month</span><b id="rProfit"></b></div>
+      <canvas class="chart mt2" id="rChart" aria-label="Cash balance over 36 months"></canvas>
+      <p class="muted" style="font-size:.85rem">Cash balance over 36 months. The red line marks zero.</p>
+    </div>
+  </div>
+  <div class="ad-zone" data-slot="inArticle"></div>
+  <article class="prose mt2">
+    <h2>Burn, runway and "default alive" explained</h2>
+    <p><b>Net burn</b> is expenses minus revenue each month. <b>Runway</b> is how many months your cash covers that burn. Because revenue and expenses both change, this calculator projects month by month instead of dividing cash by today's burn.</p>
+    <p>"Default alive" is a term popularised in startup circles: if nothing changes — no new funding, same growth rates — does the company reach profitability before its cash runs out? If the answer is no, you are "default dead" and need to cut costs, grow faster or raise money now, while you still have time to do it calmly.</p>
+    <h3>Rules of thumb</h3>
+    <ul><li>Start fundraising or cost-cutting with at least 6–9 months of runway left.</li><li>Small changes in monthly growth rate move the break-even month dramatically — test 5%, 10% and 15%.</li><li>Expense growth quietly kills runway; review subscriptions every quarter.</li></ul>
+    <p>Read the full guide: <a href="/guides/runway-and-burn-rate.html">runway and burn rate explained</a>.</p>
+  </article>
+  {{TOOL_LEAD:runway}}
+  {{RELATED}}
+</div></section>

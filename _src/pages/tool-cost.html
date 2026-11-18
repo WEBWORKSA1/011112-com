@@ -1,0 +1,56 @@
+<!--META {"title":"Startup Cost Calculator — How Much Does It Cost to Start?","desc":"Estimate one-time and monthly startup costs for SaaS, AI, e-commerce, service and content businesses, plus the total cash you need for your runway.","path":"/tools/startup-cost-calculator.html","nav":"tools","tool":"cost","schema":{"@context":"https://schema.org","@type":"WebApplication","name":"Startup Cost Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}} -->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <a href="/tools.html">Tools</a> / Startup Cost Calculator</div>
+  <h1>🧮 Startup Cost Calculator</h1>
+  <p>Pick a business type to load typical lean-launch costs, then adjust every line to match your plan.</p>
+</div></div>
+<section><div class="container">
+  <div class="tool" id="cost">
+    <div class="card">
+      <div class="row">
+        <div class="field"><label for="ptype">Business type</label><select id="ptype"><option value="saas">SaaS / software</option><option value="ai">AI product</option><option value="ecom">E‑commerce</option><option value="service">Service / agency</option><option value="content">Content / media site</option></select></div>
+        <div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>EUR</option><option>GBP</option><option>INR</option><option>AUD</option></select></div>
+      </div>
+      <h4>One-time costs</h4>
+      <div class="row">
+        <div class="field"><label for="c_domain">Domain &amp; branding</label><input id="c_domain" type="number" min="0"></div>
+        <div class="field"><label for="c_legal">Incorporation &amp; legal</label><input id="c_legal" type="number" min="0"></div>
+        <div class="field"><label for="c_design">Design &amp; website</label><input id="c_design" type="number" min="0"></div>
+        <div class="field"><label for="c_dev">Product development</label><input id="c_dev" type="number" min="0"></div>
+        <div class="field"><label for="c_misc">Inventory / equipment / other</label><input id="c_misc" type="number" min="0"></div>
+      </div>
+      <h4>Monthly costs</h4>
+      <div class="row">
+        <div class="field"><label for="c_tools">Software &amp; AI tools</label><input id="c_tools" type="number" min="0"></div>
+        <div class="field"><label for="c_hosting">Hosting &amp; APIs</label><input id="c_hosting" type="number" min="0"></div>
+        <div class="field"><label for="c_marketing">Marketing</label><input id="c_marketing" type="number" min="0"></div>
+        <div class="field"><label for="c_ins">Insurance &amp; accounting</label><input id="c_ins" type="number" min="0"></div>
+        <div class="field"><label for="c_salary">Salaries / contractors</label><input id="c_salary" type="number" min="0" value="0"></div>
+      </div>
+      <div class="row">
+        <div class="field mb0"><label for="c_months">Months of runway to fund</label><input id="c_months" type="number" value="12" min="1" max="60"></div>
+        <div class="field mb0"><label for="c_buffer">Contingency buffer %</label><input id="c_buffer" type="number" value="20" min="0" max="100"></div>
+      </div>
+    </div>
+    <div>
+      <div class="result">
+        <span class="kicker">Cash you need</span>
+        <div class="big" id="cTotal">–</div>
+        <p class="muted">to launch and run for <b id="cMonths">12</b> months, including buffer</p>
+        <div class="kv"><span>One-time costs</span><b id="cOnce"></b></div>
+        <div class="kv"><span>Monthly costs</span><b id="cMonthly"></b></div>
+        <p class="muted mt2" style="font-size:.88rem">Defaults are illustrative lean-launch estimates for a solo founder and vary widely by country and scope. Replace them with real quotes.</p>
+      </div>
+      {{TOOL_LEAD:startup-cost:costHidden}}
+    </div>
+  </div>
+  <div class="ad-zone" data-slot="inArticle"></div>
+  <article class="prose mt2">
+    <h2>How to use your startup cost estimate</h2>
+    <p>Split costs into <b>one-time</b> (things you pay once to open the doors) and <b>monthly</b> (what it costs to keep them open). The monthly number drives your runway, which is why the calculator multiplies it by the number of months you want to fund and adds a contingency buffer — first ventures almost always cost more than planned.</p>
+    <h3>Ways to cut the number</h3>
+    <ul><li>Validate with a landing page before paying for development.</li><li>Use free tiers and pay-as-you-go APIs until usage justifies upgrades.</li><li>Trade equity or revenue share for specialist help only when it's truly critical.</li><li>Delay incorporation costs until you have paying customers — where local rules allow.</li></ul>
+    <p>Next, see how long that cash lasts with the <a href="/tools/runway-calculator.html">Runway Calculator</a>, or read <a href="/guides/startup-costs.html">what it really costs to start a business</a>.</p>
+  </article>
+  {{RELATED}}
+</div></section>

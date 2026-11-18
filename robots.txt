@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /_src/
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://011112.com/sitemap.xml

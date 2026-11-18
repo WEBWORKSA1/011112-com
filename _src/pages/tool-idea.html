@@ -1,0 +1,50 @@
+<!--META {"title":"Startup Idea Score — Free Idea Validation Tool","desc":"Score your startup or side-hustle idea on 10 make-or-break factors. Get a 0–100 score, a verdict, your three weakest areas and next steps. Free, private, instant.","path":"/tools/idea-score.html","nav":"tools","tool":"idea","schema":{"@context":"https://schema.org","@type":"WebApplication","name":"Startup Idea Score","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://011112.com/tools/idea-score.html"}} -->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <a href="/tools.html">Tools</a> / Idea Score</div>
+  <h1>💡 Startup Idea Score</h1>
+  <p>Rate your idea honestly on ten factors that decide whether new ventures live or die. Move the sliders — your score updates instantly.</p>
+</div></div>
+<section><div class="container">
+  <div class="tool" id="idea">
+    <div class="card">
+      <div class="field"><label for="ideaName">Your idea in one line</label><input id="ideaName" placeholder="e.g. AI bookkeeping for Etsy sellers"></div>
+      <div class="field"><label>Problem pain (how much it hurts)</label><div class="range-row"><input type="range" min="0" max="10" value="6" data-label="Problem pain" data-fix="Find a segment for whom this is urgent, not just annoying."><output></output></div></div>
+      <div class="field"><label>Frequency (how often it happens)</label><div class="range-row"><input type="range" min="0" max="10" value="5" data-label="Frequency" data-fix="Look for a weekly or daily version of the problem."><output></output></div></div>
+      <div class="field"><label>Willingness to pay</label><div class="range-row"><input type="range" min="0" max="10" value="5" data-label="Willingness to pay" data-fix="Target buyers who already spend money on a workaround."><output></output></div></div>
+      <div class="field"><label>Market size</label><div class="range-row"><input type="range" min="0" max="10" value="5" data-label="Market size" data-fix="Check you can reach at least thousands of paying customers."><output></output></div></div>
+      <div class="field"><label>Reachability (can you find buyers cheaply?)</label><div class="range-row"><input type="range" min="0" max="10" value="5" data-label="Reachability" data-fix="Name three channels where your buyers already gather."><output></output></div></div>
+      <div class="field"><label>Your unfair advantage</label><div class="range-row"><input type="range" min="0" max="10" value="4" data-label="Unfair advantage" data-fix="Lean on expertise, audience, data or relationships others lack."><output></output></div></div>
+      <div class="field"><label>Competition gap (10 = clear gap)</label><div class="range-row"><input type="range" min="0" max="10" value="5" data-label="Competition gap" data-fix="Pick a niche incumbents ignore and own it."><output></output></div></div>
+      <div class="field"><label>Speed to MVP</label><div class="range-row"><input type="range" min="0" max="10" value="6" data-label="Speed to MVP" data-fix="Cut scope until you can ship in under 30 days."><output></output></div></div>
+      <div class="field"><label>Timing / "why now"</label><div class="range-row"><input type="range" min="0" max="10" value="6" data-label="Timing" data-fix="Tie the idea to a recent shift: AI, regulation or behaviour change."><output></output></div></div>
+      <div class="field mb0"><label>Your passion &amp; staying power</label><div class="range-row"><input type="range" min="0" max="10" value="7" data-label="Staying power" data-fix="Choose a problem you'd happily work on for five years."><output></output></div></div>
+    </div>
+    <div>
+      <div class="result">
+        <span class="kicker">Your score</span>
+        <div class="big" id="ideaScore">–</div>
+        <div class="meter"><i id="ideaMeter"></i></div>
+        <h3 id="ideaVerdict"></h3>
+        <p class="muted" id="ideaAdvice"></p>
+        <h4>Fix these first</h4>
+        <ul id="ideaWeak"></ul>
+        <button class="btn btn-ghost btn-sm" data-share>Share this tool</button>
+      </div>
+      {{TOOL_LEAD:idea-score:ideaHidden}}
+    </div>
+  </div>
+  <div class="ad-zone" data-slot="inArticle"></div>
+  <article class="prose mt2">
+    <h2>How the Idea Score works</h2>
+    <p>The score adds your ten ratings and converts them to a 0–100 scale. It is a structured self-assessment, not a prediction: its value comes from forcing you to be specific about each factor. Founders tend to rate their own ideas generously, so a useful habit is to ask two people who know your market to score it as well and compare.</p>
+    <h3>What the bands mean</h3>
+    <table><tr><th>Score</th><th>Signal</th><th>Next step</th></tr>
+      <tr><td>75–100</td><td>Strong</td><td>Pre-sell with a landing page this week.</td></tr>
+      <tr><td>55–74</td><td>Promising</td><td>Ten customer interviews before building.</td></tr>
+      <tr><td>35–54</td><td>Risky</td><td>Reframe the customer or the problem.</td></tr>
+      <tr><td>0–34</td><td>Rethink</td><td>Keep the insight, change the idea.</td></tr></table>
+    <h3>The factors that matter most</h3>
+    <p>If you only fix three things, fix <b>problem pain</b>, <b>willingness to pay</b> and <b>reachability</b>. A painful problem that people already pay to work around, sold through a channel you can access cheaply, beats a large market with no clear way in. Read our <a href="/guides/validate-startup-idea.html">7-day validation guide</a> for the exact process.</p>
+  </article>
+  {{RELATED}}
+</div></section>

@@ -1,0 +1,39 @@
+<!--META {"title":"Startup Valuation Estimator — Revenue Multiple Range","desc":"Estimate an indicative valuation range for SaaS, AI, e-commerce, marketplace, content or service businesses using revenue, growth, gross margin and churn.","path":"/tools/valuation-calculator.html","nav":"tools","tool":"valuation","schema":{"@context":"https://schema.org","@type":"WebApplication","name":"Valuation Estimator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}} -->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <a href="/tools.html">Tools</a> / Valuation Estimator</div>
+  <h1>💎 Valuation Estimator</h1>
+  <p>A quick, indicative range based on revenue multiples. Useful for planning, conversations and sanity checks — not a formal appraisal.</p>
+</div></div>
+<section><div class="container">
+  <div class="tool" id="valuation">
+    <div class="card">
+      <div class="row">
+        <div class="field"><label for="v_model">Business model</label><select id="v_model"><option value="saas">SaaS</option><option value="ai">AI-native software</option><option value="marketplace">Marketplace</option><option value="content">Content / media</option><option value="ecom">E‑commerce</option><option value="service">Service / agency</option></select></div>
+        <div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>EUR</option><option>GBP</option><option>INR</option><option>AUD</option></select></div>
+        <div class="field"><label for="v_arr">Annual revenue (ARR / TTM)</label><input id="v_arr" type="number" value="250000" min="0"></div>
+        <div class="field"><label for="v_growth">YoY growth %</label><input id="v_growth" type="number" value="60"></div>
+        <div class="field"><label for="v_margin">Gross margin %</label><input id="v_margin" type="number" value="75" min="0" max="100"></div>
+        <div class="field mb0"><label for="v_churn">Monthly churn %</label><input id="v_churn" type="number" value="3" min="0" step="0.5"></div>
+      </div>
+    </div>
+    <div>
+      <div class="result">
+        <span class="kicker">Indicative mid-point</span>
+        <div class="big" id="vMid">–</div>
+        <div class="kv"><span>Low</span><b id="vLow"></b></div>
+        <div class="kv"><span>High</span><b id="vHigh"></b></div>
+        <div class="kv"><span>Implied multiple</span><b id="vMult"></b></div>
+        <p class="muted mt2" style="font-size:.85rem">Illustrative multiples only. Real valuations depend on market conditions, profitability, team, deal terms and buyer type. Not financial advice.</p>
+      </div>
+      {{TOOL_LEAD:valuation:valHidden}}
+    </div>
+  </div>
+  <div class="ad-zone" data-slot="inArticle"></div>
+  <article class="prose mt2">
+    <h2>How revenue multiples work</h2>
+    <p>Buyers and investors often value early-stage and small online businesses as a multiple of revenue (or of profit, for smaller cash-flow businesses). Recurring, high-margin, fast-growing revenue earns higher multiples; one-off, low-margin or high-churn revenue earns lower ones. This estimator starts from a baseline multiple per model and adjusts for growth, margin and churn.</p>
+    <h3>Levers that raise your multiple</h3>
+    <ul><li>Lower churn and higher net revenue retention</li><li>Faster, more predictable growth</li><li>Higher gross margin</li><li>Diversified customers and channels</li><li>Clean books and documented processes</li></ul>
+  </article>
+  {{RELATED}}
+</div></section>

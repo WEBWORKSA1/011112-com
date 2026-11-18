@@ -1,0 +1,39 @@
+<!--META {"title":"MRR & LTV Calculator — 24-Month SaaS Revenue Projection","desc":"Project monthly recurring revenue for 24 months with churn and growth, and calculate customer lifetime value, LTV:CAC ratio and CAC payback period.","path":"/tools/mrr-calculator.html","nav":"tools","tool":"mrr","schema":{"@context":"https://schema.org","@type":"WebApplication","name":"MRR & LTV Projector","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}} -->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <a href="/tools.html">Tools</a> / MRR &amp; LTV</div>
+  <h1>📈 MRR &amp; LTV Projector</h1>
+  <p>See where recurring revenue lands in 12 and 24 months — and whether each customer is worth what you pay to win them.</p>
+</div></div>
+<section><div class="container">
+  <div class="tool" id="mrr">
+    <div class="card">
+      <div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>EUR</option><option>GBP</option><option>INR</option><option>AUD</option></select></div>
+      <div class="row">
+        <div class="field"><label for="m_cust">Current paying customers</label><input id="m_cust" type="number" value="40" min="0"></div>
+        <div class="field"><label for="m_arpu">Avg revenue per customer / month</label><input id="m_arpu" type="number" value="29" min="0"></div>
+        <div class="field"><label for="m_new">New customers / month</label><input id="m_new" type="number" value="25" min="0"></div>
+        <div class="field"><label for="m_newg">Growth in new customers % / month</label><input id="m_newg" type="number" value="5" step="0.5"></div>
+        <div class="field"><label for="m_churn">Monthly churn %</label><input id="m_churn" type="number" value="4" min="0" step="0.5"></div>
+        <div class="field mb0"><label for="m_cac">Customer acquisition cost (CAC)</label><input id="m_cac" type="number" value="60" min="0"></div>
+      </div>
+    </div>
+    <div class="result">
+      <span class="kicker">MRR in 12 months</span>
+      <div class="big" id="mMrr">–</div>
+      <div class="kv"><span>ARR run-rate at month 24</span><b id="mArr"></b></div>
+      <div class="kv"><span>Customer lifetime value</span><b id="mLtv"></b></div>
+      <div class="kv"><span>LTV : CAC</span><b id="mRatio"></b></div>
+      <div class="kv"><span>CAC payback</span><b id="mPayback"></b></div>
+      <canvas class="chart mt2" id="mChart" aria-label="MRR over 24 months"></canvas>
+    </div>
+  </div>
+  <table class="table mt2"><thead><tr><th>Month</th><th>Customers</th><th>MRR</th><th>ARR run-rate</th></tr></thead><tbody id="mTable"></tbody></table>
+  <div class="ad-zone" data-slot="inArticle"></div>
+  <article class="prose mt2">
+    <h2>Reading your numbers</h2>
+    <p><b>LTV</b> here is average monthly revenue per customer divided by monthly churn — a simple revenue-based lifetime value. Multiply by your gross margin for a stricter version. An <b>LTV:CAC</b> ratio of 3:1 or better is a common benchmark for healthy acquisition; payback under 12 months keeps cash needs manageable.</p>
+    <p>Churn compounds. At 4% monthly churn you lose roughly 39% of a cohort in a year; at 2% it's about 22%. Halving churn is often worth more than doubling acquisition spend. Pair this with the <a href="/tools/runway-calculator.html">Runway Calculator</a> to see whether growth arrives before cash runs out.</p>
+  </article>
+  {{TOOL_LEAD:mrr}}
+  {{RELATED}}
+</div></section>
